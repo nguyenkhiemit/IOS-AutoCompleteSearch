@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoryCell" customModule="RxAlamofileTest" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryCell" rowHeight="77" id="w6l-fe-iLG" customClass="RepositoryCell" customModule="RxAlamofileTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w6l-fe-iLG" id="ZTC-Xo-PVe">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daO-Xn-Mtd">
+                        <rect key="frame" x="10" y="20" width="355" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="YOy-jq-BRJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="daO-Xn-Mtd" firstAttribute="leading" secondItem="ZTC-Xo-PVe" secondAttribute="leading" constant="10" id="KAA-kT-2t4"/>
+                    <constraint firstAttribute="trailing" secondItem="daO-Xn-Mtd" secondAttribute="trailing" constant="10" id="Q6l-di-pkx"/>
+                    <constraint firstItem="daO-Xn-Mtd" firstAttribute="centerY" secondItem="ZTC-Xo-PVe" secondAttribute="centerY" id="esX-BW-cLX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="daO-Xn-Mtd" id="f54-0E-phY"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="161.5"/>
+        </tableViewCell>
+    </objects>
+</document>
