@@ -1,0 +1,29 @@
+It is simple example How to use MVVMC in Swift3
+
+use libs: RxSwift, RxCocoa, RxAlamofire, Alamofire
+
+In this project I use Drive instance of Binding: 
+
+Binding VS Driver in RxSwift
+
+I will try to improve it with an example:
+
+Imagine you have this code:
+
+let intObservable = sequenceOf(1, 2, 3, 4, 5, 6)
+    .observeOn(MainScheduler.sharedInstance)
+    .catchErrorJustReturn(1)
+    .map { $0 + 1 }
+    .filter { $0 < 5 }
+    .shareReplay(1)
+    
+Driver You can read more in detail what the Driver is all about from the documentation. In summary, it simply allows you to rely on these properties: - Can't error out - Observe on main scheduler - Sharing side effects
+
+if you use Driver, you won't have to specify observeOn, shareReplay nor catchErrorJustReturn.
+
+In summary, the code above is similar to this one using Driver:
+
+let intDriver = sequenceOf(1, 2, 3, 4, 5, 6)
+    .asDriver(onErrorJustReturn: 1)
+    .map { $0 + 1 }
+    .filter { $0 < 5 }
